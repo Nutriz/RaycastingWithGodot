@@ -29,4 +29,15 @@ tile_data = PoolIntArray( 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 
 [node name="Camera" type="Position2D" parent="."]
 script = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
+WIDTH_SCREEN = 50
+rayLength = 384
+moveSpeed = 200
+angleSpeed = 100
 
+[node name="Timer" type="Timer" parent="."]
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = true
+
+[connection signal="timeout" from="Timer" to="Camera" method="_on_Timer_timeout"]
