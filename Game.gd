@@ -6,3 +6,5 @@ const proj_plane_center = Vector2(160, 100)
 const proj_plane_dist = 277
 const angle_btw_rays = 60/320
 
+
+

@@ -29,8 +29,8 @@ tile_data = PoolIntArray( 0, 2, 0, 1, 2, 0, 2, 2, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 
 [node name="Camera" type="Position2D" parent="."]
 script = ExtResource( 3 )
 _sections_unfolded = [ "Transform" ]
-WIDTH_SCREEN = 2
-rayLength = 384
+WIDTH_SCREEN = 320
+rayLength = 640
 moveSpeed = 200
 angleSpeed = 100
 
@@ -51,3 +51,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 902.0
+margin_top = 12.0
+margin_right = 1007.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Update"
+flat = false
+align = 1
+
+[connection signal="pressed" from="Button" to="Camera" method="_on_Button_pressed"]
